@@ -36,6 +36,7 @@ body, html {
     width: 100%;
     height: 10%;
     background-color: red;
+    text-align: center;
 }
 
 .box-card {
@@ -50,16 +51,24 @@ body, html {
 .box-console {
     height: 60%;
     width: 100%;
-    background-color: blue;
+    background-color: black;
 }
 
 .box-deck {
     height: 40%;
     width: 100%;
-    background-color: green;
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
 
 /* CARD */
+
+.box-vida h3 {
+    display: inline-block;
+    padding: 0px 10px
+}
 
 .card {
     width: 70%;
@@ -74,7 +83,7 @@ body, html {
 .card-name {
     height: 30%;
     width: 50%;
-    background-color: #cccccc;
+    background-color: #eeeeee;
     border-radius: 0 20px 0 0;
     display: flex;
     align-items: center;
@@ -91,7 +100,7 @@ body, html {
 .card-image {
     height: 30%;
     width: 50%;
-    background-color: #cccccc;
+    background-color: #eeeeee;
     border-radius: 20px 0 0 0;
     display: flex;
     align-items: center;
@@ -99,14 +108,15 @@ body, html {
 }
 
 .card-image img {
-    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
     height: 90%;
 }
 
 .card-skill {
     height: 40%;
     width: 100%;
-    background-color: green;
+    background-color: #333333;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -115,7 +125,7 @@ body, html {
 /* JAVA SCRIPT */
 .card-skill .js {
     height: 30%;
-    background-color: bisque;
+    background-color: lightblue;
     display: flex;
     align-items: center;
 }
@@ -153,7 +163,7 @@ body, html {
 /* HTML */
 .card-skill .html {
     height: 30%;
-    background-color: cadetblue;
+    background-color: #eeeeee;
     display: flex;
     align-items: center;
 }
@@ -161,7 +171,7 @@ body, html {
 /* CSS */
 .card-skill .css {
     height: 30%;
-    background-color: blanchedalmond;
+    background-color: lightblue;
     display: flex;
     align-items: center;
 }
@@ -169,12 +179,57 @@ body, html {
 .card-special {
     height: 30%;
     width: 60%;
-    background-color: yellow;
     border-radius: 0 0 0 20px;
+    display: flex;
+    flex-direction: column;
 }
+
+.special-title {
+    height: 35%;
+}
+
+.special-title h3 {
+    margin: 0px;
+    padding: 10px 10px 0px 10px;;
+    text-align: center;
+}
+
+.special-title h4 {
+    margin: 0px;
+    padding:5px;
+    text-align: center;
+}
+
+.special-description {
+    height: 65%;
+    padding: 8px;
+    text-align: center;
+}
+
 .card-activator {
     height: 30%;
     width: 40%;
-    background-color: red;
+    background-color: #333333;
+    color: white;
     border-radius: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-activator h3 {
+    text-align: center;
+}
+
+.card-activator ul {
+
+}
+
+.deck-comecar {
+    height: 200px;
+    width: 150px;
+    background: #333333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
