@@ -11,51 +11,51 @@
 </head>
 
 <body>
-
+<div class="home">Bem vindo ao meu jogo! <button id="start-game">ENTRAR</button></div>
     <div class="container">
         <div class="box-user">
             <div class="box-vida">
-                <h3>User Name</h3><h3>:</h3><h3>5</h3>
+                <h3 id="player-name">User Name</h3><h3>:</h3><h3>5</h3>
             </div>
             <div class="box-card">
                 <div class="card">
-                    <div class="card-image"><img src="img/sany.jpg"></div>
-                    <div class="card-name"><h1>Sany</h1></div>
+                    <div class="card-image" id="user-card-img"></div>
+                    <div class="card-name"><h1 id="user-card-name"></h1></div>
                     <div class="card-skill">
-                        <div class="js">
+                        <div class="js" id="user-js-btn">
                             <div class="label">JS</div>
                             <div class="bar">
-                                <div class="bar-level-js"></div>
+                                <div class="bar-level-js" id="bar-user-js"></div>
                             </div>
-                            <div class="level">85</div>
+                            <div class="level" id="user-js-level">85</div>
                         </div>
-                        <div class="html">
+                        <div class="html" id="user-html-btn">
                             <div class="label">HTML</div>
                             <div class="bar">
-                                <div class="bar-level-html"></div>
+                                <div class="bar-level-html" id="bar-user-html"></div>
                             </div>
-                            <div class="level">85</div>
+                            <div class="level" id="user-html-level">85</div>
                         </div>
-                        <div class="css">
+                        <div class="css" id="user-css-btn">
                             <div class="label">CSS</div>
                             <div class="bar">
-                                <div class="bar-level-css"></div>
+                                <div class="bar-level-css" id="bar-user-css"></div>
                             </div>
-                            <div class="level">37</div>
+                            <div class="level" id="user-css-level">37</div>
                         </div>
                     </div>
                     <div class="card-special">
                         <div class="special-title">
                             <h3>Special:</h3>
-                            <h4>Brain Melted</h4> 
+                            <h4 id="user-special">Brain Melted</h4> 
                         </div>
-                        <div class="special-description">
+                        <div class="special-description" id="user-special-description">
                             <p>Retira 15 pontos de cada skill do oponente</p>
                         </div>
                     </div>
                     <div class="card-activator">
                         <h3>Ativador</h3>
-                        <ul>
+                        <ul id="user-activator">
                             <li>Fred</li>
                             <li>Lucas</li>
                             <li>Wilkor</li>
@@ -70,47 +70,45 @@
                 <h3>PC</h3><h3>:</h3><h3>5</h3>
             </div>
             <div class="box-card">
-                <div class="card">
-                    <div class="card-image"><img src="img/sany.jpg"></div>
-                    <div class="card-name"><h1>Sany</h1></div>
+                <div class="card-pc">
+                    <div class="card-image" id="pc-card-img"></div>
+                    <div class="card-name"><h1 id="pc-card-name"></h1></div>
                     <div class="card-skill">
-                        <div class="js">
+                        <div class="js" id="pc-js-btn">
                             <div class="label">JS</div>
                             <div class="bar">
-                                <div class="bar-level-js"></div>
+                                <div class="bar-level-js" id="bar-pc-js"></div>
                             </div>
-                            <div class="level">85</div>
+                            <div class="level" id="pc-js-level">0</div>
                         </div>
-                        <div class="html">
+                        <div class="html" id="pc-html-btn">
                             <div class="label">HTML</div>
                             <div class="bar">
-                                <div class="bar-level-html"></div>
+                                <div class="bar-level-html" id="bar-pc-html"></div>
                             </div>
-                            <div class="level">85</div>
+                            <div class="level" id="pc-html-level">0</div>
                         </div>
-                        <div class="css">
+                        <div class="css" id="pc-css-btn">
                             <div class="label">CSS</div>
                             <div class="bar">
-                                <div class="bar-level-css"></div>
+                                <div class="bar-level-css" id="bar-pc-css"></div>
                             </div>
-                            <div class="level">37</div>
+                            <div class="level" id="pc-css-level">0</div>
                         </div>
                     </div>
                     <div class="card-special">
                         <div class="special-title">
                             <h3>Special:</h3>
-                            <h4>Brain Melted</h4> 
+                            <h4 id="pc-special"></h4> 
                         </div>
-                        <div class="special-description">
-                            <p>Retira 15 pontos de cada skill do oponente</p>
+                        <div class="special-description" id="pc-special-description">
+                            <p></p>
                         </div>
                     </div>
                     <div class="card-activator">
                         <h3>Ativador</h3>
-                        <ul>
-                            <li>Fred</li>
-                            <li>Lucas</li>
-                            <li>Wilkor</li>
+                        <ul id="pc-activator">
+                            
                         </ul>
                     </div>
                 </div>
@@ -127,6 +125,7 @@
 
 <script src="cards.js"></script>
 <script src="players.js"></script>
+<script src="functions.js"></script>
 <script src="main.js"></script>
 
 </body>

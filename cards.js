@@ -39,7 +39,7 @@ var cards = [
     css: 80,
     special: 'Web Surf',
     description: 'Após surfar na web, Gabriel ganha 10 pontos em cada skill',
-    activator: []
+    activator: ['Fred', 'Marcelo', 'Gui']
 },
 {
     name: 'Professor Coe',
@@ -83,7 +83,7 @@ var cards = [
 },
 {
     name: 'Paul',
-    image: '<img src="img/paul.jpg">',
+    image: '<img src="img/paul.png">',
     js: 68,
     html: 82,
     css: 60,
@@ -93,7 +93,7 @@ var cards = [
 },
 {
     name: 'Pedro',
-    image: '<img src="img/pedro.jpg">',
+    image: '<img src="img/pedro.png">',
     js: 66,
     html: 87,
     css: 59,
@@ -111,8 +111,9 @@ var cards = [
     description: 'Rafa passou a virose para o oponente, retirando 20 pontos de cada skill',
     activator: ['Clé','Professor Coe','Gabriel']
 },
-{   name: 'Wilkor',
-    image: '<img src="img/wilkor.jpg">',
+{   
+    name: 'Wilkor',
+    image: '<img src="img/wilkor.png">',
     js: 85,
     html: 77,
     css: 85,
@@ -139,7 +140,7 @@ var cards = [
     special: 'Brain Melted',
     description: 'As dúvidas de Fred derretem o cérebro do oponente, retirando 40 pontos do oponente.',
     activator: ['Paul','Pedro','Lucas']
-}
+},
 {
     name: 'Gui',
     image: '<img src="img/gui.jpg">',
