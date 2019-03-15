@@ -52,6 +52,10 @@ body, html {
     height: 60%;
     width: 100%;
     background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box-deck {
@@ -94,7 +98,7 @@ body, html {
     border: 2px solid gray;
     display: flex;
     flex-wrap: wrap;
-    transition: top 1s ease-out;
+    transition: .8s ease-out;
 }
 
 .card-name {

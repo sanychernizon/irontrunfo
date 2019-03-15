@@ -105,7 +105,6 @@ function selectedPcSkill(skill) {
         var barSkillHtml = document.querySelector('#pc-html-btn')
         barSkillHtml.classList.add('selected');
     }
-
     if (skill == 'css') {
         var barSkillCss = document.querySelector('#pc-css-btn')
         barSkillCss.classList.add('selected');
@@ -116,15 +115,82 @@ function game(skill) {
     if (skill == 'js') {
         revealPcCard();
         selectedPcSkill(skill);
+        gameJs(user, pc);
     }
-
     if (skill == 'html') {
         revealPcCard();
         selectedPcSkill(skill);
+        gameHtml(user,pc);
     }
-
     if (skill == 'css') {
         revealPcCard();
         selectedPcSkill(skill);
+        gameCss(user,pc);
     }
 };
+
+function gameJs(user, pc) {
+    if (user.card.js > pc.card.js) {
+        pc.life--
+        setTimeout(function(){
+            lifePc.innerHTML = pc.life;
+            consoleBox.innerHTML = 'VENCEU a partida!';
+        }, 1200);
+    }
+    if (user.card.js < pc.card.js) {
+        user.life--
+        setTimeout(function(){
+            lifeUser.innerHTML = user.life;
+            consoleBox.innerHTML = 'PERDEU a partida... :(';
+        }, 1200);
+    }
+    if (user.card.js == pc.card.js) {
+        setTimeout(function(){
+        consoleBox.innerHTML = 'Empatou!';
+        }, 1200);
+    }
+}
+
+function gameHtml(user, pc) {
+    if (user.card.html > pc.card.html) {
+        pc.life--
+        setTimeout(function(){
+            lifePc.innerHTML = pc.life;
+            consoleBox.innerHTML = 'VENCEU a partida!';
+        }, 1200);
+    }
+    if (user.card.html < pc.card.html) {
+        user.life--
+        setTimeout(function(){
+            lifeUser.innerHTML = user.life;
+            consoleBox.innerHTML = 'PERDEU a partida... :(';
+        }, 1200);
+    }
+    if (user.card.html == pc.card.html) {
+        setTimeout(function(){
+        consoleBox.innerHTML = 'Empatou!';
+        }, 1200);
+    }
+}
+
+function gameCss(user, pc) {
+    if (user.card.css > pc.card.css) {
+        pc.life--
+        setTimeout(function(){
+            lifePc.innerHTML = pc.life;
+            consoleBox.innerHTML = 'VENCEU a partida!';
+        }, 1200);
+    }
+    if (user.card.css < pc.card.css) {
+        user.life--
+        setTimeout(function(){
+            lifeUser.innerHTML = user.life;
+            consoleBox.innerHTML = 'PERDEU a partida... :(';
+        }, 1200);
+    }
+    if (user.card.css == pc.card.css) {
+        setTimeout(function(){
+        consoleBox.innerHTML = 'Empatou!';
+        }, 1200);
+    }
+}
