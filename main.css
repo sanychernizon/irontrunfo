@@ -305,6 +305,7 @@ body, html {
     justify-content: center;
     font-weight: bold;
     font-size: 1.5em;
+    z-index: 999;
 }
 
 .btn-jogar-novamente {
@@ -319,11 +320,19 @@ body, html {
     display: flex;
 }
 
-.placar {
-    display: flex;
-    flex-direction: row;
-}
-
-.placar h3 {
-    padding: 10px;
+.modal-special {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    color:white;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    z-index: 999;
 }

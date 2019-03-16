@@ -83,3 +83,7 @@ btnPartida.addEventListener('click', function(){
 btnRestart.addEventListener('click', function(){
     location.reload();
 });
+
+btnOk.addEventListener('click', function () {
+    modalSpecialBox.style = 'display: none;';
+});

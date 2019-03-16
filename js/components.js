@@ -21,6 +21,9 @@ var rodada = document.querySelector('.rodada');
 var msgFinal = document.querySelector('#msg-final');
 var modalBox = document.querySelector('.modal');
 var btnRestart = document.querySelector('#restart-game');
+var modalSpecialBox = document.querySelector('.modal-special');
+var msgSpecial = document.querySelector('.msg-special');
+var btnOk = document.querySelector('.btn-ok');
 
 //PC CARD
 
