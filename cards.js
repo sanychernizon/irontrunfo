@@ -8,6 +8,7 @@ var cards = [
     html: 80,
     css: 85,
     special: 'Whey Protein',
+    specialPwr: 3,
     description: 'Após uma dose de Whey, Sany ganha 3 pontos de cada skill.',
     activator: ['Rafa', 'Marcelo', 'Gui']
 },
@@ -18,6 +19,7 @@ var cards = [
     html: 87,
     css: 83,
     special: 'Feijoada Alada',
+    specialPwr: 4,
     description: 'Apoś comer uma bela feijoada, Romulo ganha 4 pontos de cada skill.',
     activator: ['Fred','Manu','Marcelo']
 },
@@ -28,6 +30,7 @@ var cards = [
     html: 60,
     css: 48,
     special: 'Harley Comet',
+    specialPwr: 15,
     description: 'A cada 4 aulas Clé ganha 15 pontos de cada skill.',
     activator: ['Paul','Romulo','Fred']
 },
@@ -38,6 +41,7 @@ var cards = [
     html: 79,
     css: 80,
     special: 'Web Surf',
+    specialPwr: 10,
     description: 'Após surfar na web, Gabriel ganha 10 pontos em cada skill',
     activator: ['Fred', 'Marcelo', 'Gui']
 },
@@ -48,6 +52,7 @@ var cards = [
     html: 90,
     css: 86,
     special: 'Bilete da Verdade',
+    specialPwr: 5,
     description: 'Após corrigir os erros de seu oponente, Coe aumenta 5 pontos de cada skill do oponente',
     activator: ['Fred','Manu','Sany']
 },
@@ -58,16 +63,18 @@ var cards = [
     html: 52,
     css: 60,
     special: 'Kyu Spirit',
+    specialPwr: 32,
     description: 'Kerlyn consentra seu KYU aumentando 32 pontos de cada skill.',
     activator: ['Paul','Pedro','Lucas']
 },
 {
     name: 'Lucas',
-    image: '<img src="img/lucas.jpg">',
+    image: '<img src="img/lucas.png">',
     js: 70,
     html: 81,
     css: 68,
     special: 'Fatality',
+    specialPwr: 5,
     description: 'Aumenta 5 pontos de cada skill.',
     activator: ['Sany','Wilkor','Gabriel']
 },
@@ -78,6 +85,7 @@ var cards = [
     html: 87,
     css: 45,
     special: 'Pay the boleto',
+    specialPwr: 5,
     description: 'Retira 5 pontos de cada skill do oponente',
     activator: ['Clé','Wilkor','Gabriel']
 },
@@ -88,6 +96,7 @@ var cards = [
     html: 82,
     css: 60,
     special: 'Viva la France',
+    specialPwr: 5,
     description: 'Paul pede ajuda na embaixada francesa, aumenta 5 pontos de cada skill.',
     activator: ['Rafa','Manu','Sany']
 },
@@ -98,6 +107,7 @@ var cards = [
     html: 87,
     css: 59,
     special: 'Heads Up',
+    specialPwr: 10,
     description: 'Aumenta 10 pontos de cada skill.',
     activator: ['Clé','Professor Coe','Wilkor']
 },
@@ -108,6 +118,7 @@ var cards = [
     html: 89,
     css: 49,
     special: 'Virose Exponencial',
+    specialPwr: 20,
     description: 'Rafa passou a virose para o oponente, retirando 20 pontos de cada skill',
     activator: ['Clé','Professor Coe','Gabriel']
 },
@@ -118,16 +129,18 @@ var cards = [
     html: 77,
     css: 85,
     special: 'Wilkor Mode',
+    specialPwr: 10,
     description: 'Wilkor ganha 10 pontos em cada skill',
     activator: ['Kerlyn','Gui','Romulo']
 },
 {
     name: 'Marcelo',
-    image: '<img src="img/marcelo.jpg">',
+    image: '<img src="img/marcelo.png">',
     js: 76,
     html: 79,
     css: 81,
     special: 'Tech Master',
+    specialPwr: 6,
     description: 'Com os melhores gadgets, Marcelo ganha 6 pontos de cada skill',
     activator: ['Kerlyn','Rafa','Professor Coe']
 },
@@ -138,6 +151,7 @@ var cards = [
     html: 57,
     css: 46,
     special: 'Brain Melted',
+    specialPwr: 40,
     description: 'As dúvidas de Fred derretem o cérebro do oponente, retirando 40 pontos do oponente.',
     activator: ['Paul','Pedro','Lucas']
 },
@@ -148,6 +162,7 @@ var cards = [
     html: 78,
     css: 69,
     special: 'Rubens Suport',
+    specialPwr: 5,
     description: 'Rubens derruba o oponente tirando 5 pontos de cada skill.',
     activator: ['Kerlyn','Pedro','Lucas']
 }

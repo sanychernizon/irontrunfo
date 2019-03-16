@@ -6,43 +6,38 @@
 //     document.getElementById("player-name").innerHTML = playerName;
 // }
 
-var consoleBox = document.querySelector('.box-console');
-var jsBtn = document.querySelector('#user-js-btn');
-var htmlBtn = document.querySelector('#user-html-btn');
-var cssBtn = document.querySelector('#user-css-btn');
-var jsBox = document.querySelector('#user-js-btn');
-var htmlBox = document.querySelector('#user-html-btn');
-var cssBox = document.querySelector('#user-css-btn');
-var btnStart = document.querySelector('#start-game');
-var homeBox = document.querySelector('.home');
-var containerBox = document.querySelector('.container');
-var lifeUser = document.querySelector('#user-life');
-var lifePc = document.querySelector('#pc-life');
-var btnComecar = document.querySelector('.deck-comecar');
 
 // Entrar no jogo
 
 
-btnStart.addEventListener('click', function () {
-    homeBox.style = 'display: none;';
-    containerBox.style = 'display: flex;';
-})
+// btnStart.addEventListener('click', function () {
+//     homeBox.style = 'display: none;';
+//     containerBox.style = 'display: flex;';
+// })
 
 // Vida dos players
 
 lifeUser.innerHTML = user.life;
 lifePc.innerHTML = pc.life;
 
+//Sortear e mostrar card
 
-// Sortear cartas
+var clickFlagS = false;
+var rodadaNum = 7;
+rodada.innerHTML = 'Rodada: ' + rodadaNum;
 
-user.card = randomCard();
-pc.card = randomCard();
+btnSortear.addEventListener('click', function () {
+    if(clickFlagS == false){
+        user.card = randomCard();
+        pc.card = randomCard();
+        revealUserCard();
+        esconder.style = 'display: flex;';
 
-// Mostrar card do user
+        console.log(user.card.image)
+        console.log(pc.card.image)
 
-btnComecar.addEventListener('click', function () {
-    revealUserCard();
+        clickFlagS = true;
+    }
 });
 
 // DISPUTA
@@ -72,3 +67,19 @@ cssBtn.addEventListener('click', function () {
         clickFlag = true;
     }
 })
+
+btnPartida.addEventListener('click', function(){
+    zerarUserCard();
+    zerarPcCard();
+    clickFlag = false;
+    clickFlagS = false;
+    zerarEstilos();
+    rodadaNum--
+    rodada.innerHTML = 'Rodada: ' + rodadaNum;
+    
+    isWinnerRodada(user,pc);
+})
+
+btnRestart.addEventListener('click', function(){
+    location.reload();
+});

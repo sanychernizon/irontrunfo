@@ -2,7 +2,8 @@
 // Função selecionar carta aleatóriamente
 
 function randomCard() {
-    let randomNum = Math.round(Math.random() * cards.length);
+    let randomNum = Math.floor(Math.random() * cards.length);
+    console.log(randomNum);
     let cardSelected = cards[randomNum];
     cards = cards.filter(function (item) {
         return item !== cardSelected;
@@ -31,15 +32,6 @@ function isPcSpecialActive(user, pc) {
 }
 
 function revealUserCard() {
-    var userCardImg = document.querySelector('#user-card-img');
-    var userCardName = document.querySelector('#user-card-name');
-    var userJsLevel = document.querySelector('#user-js-level');
-    var userHtmlLevel = document.querySelector('#user-html-level');
-    var userCssLevel = document.querySelector('#user-css-level');
-    var userSpecial = document.querySelector('#user-special');
-    var userSpecialDescription = document.querySelector('#user-special-description');
-    var userActivator = document.querySelector('#user-activator');
-
     userCardImg.innerHTML = user.card.image;
     userCardName.innerHTML = user.card.name;
     userJsLevel.innerHTML = user.card.js;
@@ -63,15 +55,6 @@ function revealUserCard() {
 
 function revealPcCard() {
 
-    var pcCardImg = document.querySelector('#pc-card-img');
-    var pcCardName = document.querySelector('#pc-card-name');
-    var pcJsLevel = document.querySelector('#pc-js-level');
-    var pcHtmlLevel = document.querySelector('#pc-html-level');
-    var pcCssLevel = document.querySelector('#pc-css-level');
-    var pcSpecial = document.querySelector('#pc-special');
-    var pcSpecialDescription = document.querySelector('#pc-special-description');
-    var pcActivator = document.querySelector('#pc-activator');
-
     pcCardImg.innerHTML = pc.card.image;
     pcCardName.innerHTML = pc.card.name;
     pcJsLevel.innerHTML = pc.card.js;
@@ -92,21 +75,17 @@ function revealPcCard() {
     pcBarHtml.style.width = pc.card.html + '%';
     pcBarCss.style.width = pc.card.css + '%';
 
-    var pcCard = document.querySelector('.card-pc');
     pcCard.classList.add('card-show');
 }
 
 function selectedPcSkill(skill) {
     if (skill == 'js') {
-        var barSkillJs = document.querySelector('#pc-js-btn')
         barSkillJs.classList.add('selected');
     }
     if (skill == 'html') {
-        var barSkillHtml = document.querySelector('#pc-html-btn')
         barSkillHtml.classList.add('selected');
     }
     if (skill == 'css') {
-        var barSkillCss = document.querySelector('#pc-css-btn')
         barSkillCss.classList.add('selected');
     }
 }
@@ -134,21 +113,25 @@ function gameJs(user, pc) {
         pc.life--
         setTimeout(function(){
             lifePc.innerHTML = pc.life;
-            consoleBox.innerHTML = 'VENCEU a partida!';
+            consoleMsg.innerHTML = 'VENCEU a partida!';
         }, 1200);
     }
     if (user.card.js < pc.card.js) {
         user.life--
         setTimeout(function(){
             lifeUser.innerHTML = user.life;
-            consoleBox.innerHTML = 'PERDEU a partida... :(';
+            consoleMsg.innerHTML = 'PERDEU a partida... :(';
         }, 1200);
     }
     if (user.card.js == pc.card.js) {
         setTimeout(function(){
-        consoleBox.innerHTML = 'Empatou!';
+        consoleMsg.innerHTML = 'Empatou!';
         }, 1200);
     }
+    setTimeout(function(){
+        btnPartida.style = 'display: flex;';
+        isWinner();
+    }, 1200);
 }
 
 function gameHtml(user, pc) {
@@ -156,21 +139,25 @@ function gameHtml(user, pc) {
         pc.life--
         setTimeout(function(){
             lifePc.innerHTML = pc.life;
-            consoleBox.innerHTML = 'VENCEU a partida!';
+            consoleMsg.innerHTML = 'VENCEU a partida!';
         }, 1200);
     }
     if (user.card.html < pc.card.html) {
         user.life--
         setTimeout(function(){
             lifeUser.innerHTML = user.life;
-            consoleBox.innerHTML = 'PERDEU a partida... :(';
+            consoleMsg.innerHTML = 'PERDEU a partida... :(';
         }, 1200);
     }
     if (user.card.html == pc.card.html) {
         setTimeout(function(){
-        consoleBox.innerHTML = 'Empatou!';
+        consoleMsg.innerHTML = 'Empatou!';
         }, 1200);
     }
+    setTimeout(function(){
+        btnPartida.style = 'display: flex;';
+        isWinner();
+    }, 1200);
 }
 
 function gameCss(user, pc) {
@@ -178,19 +165,87 @@ function gameCss(user, pc) {
         pc.life--
         setTimeout(function(){
             lifePc.innerHTML = pc.life;
-            consoleBox.innerHTML = 'VENCEU a partida!';
+            consoleMsg.innerHTML = 'VENCEU a partida!';
         }, 1200);
     }
     if (user.card.css < pc.card.css) {
         user.life--
         setTimeout(function(){
             lifeUser.innerHTML = user.life;
-            consoleBox.innerHTML = 'PERDEU a partida... :(';
+            consoleMsg.innerHTML = 'PERDEU a partida... :(';
         }, 1200);
     }
     if (user.card.css == pc.card.css) {
         setTimeout(function(){
-        consoleBox.innerHTML = 'Empatou!';
+        consoleMsg.innerHTML = 'Empatou!';
         }, 1200);
+    }
+    setTimeout(function(){
+        btnPartida.style = 'display: flex;';
+        isWinner();
+    }, 1200);
+}
+
+function zerarUserCard() {
+
+    userCardImg.innerHTML = '';
+    userCardName.innerHTML = '';
+    userJsLevel.innerHTML = '';
+    userHtmlLevel.innerHTML = '';
+    userCssLevel.innerHTML = '';
+    userSpecial.innerHTML = '';
+    userSpecialDescription.innerHTML = '';
+    userActivator.innerHTML = '';
+}
+
+function zerarPcCard() {
+
+    pcCardImg.innerHTML = '';
+    pcCardName.innerHTML = '';
+    pcJsLevel.innerHTML = '';
+    pcHtmlLevel.innerHTML = '';
+    pcCssLevel.innerHTML = '';
+    pcSpecial.innerHTML = '';
+    pcSpecialDescription.innerHTML = '';
+    pcActivator.innerHTML = '';
+}
+
+function zerarEstilos() {
+    cssBox.classList.remove('selected');
+    htmlBox.classList.remove('selected');
+    jsBox.classList.remove('selected');
+    barSkillJs.classList.remove('selected');
+    barSkillHtml.classList.remove('selected');
+    barSkillCss.classList.remove('selected');
+    pcCard.classList.remove('card-show');
+    esconder.style = 'display: none;';
+    btnPartida.style = 'display: none;';
+    consoleMsg.innerHTML = '';
+}
+
+function isWinner(){
+    if(user.life == 0){
+        msgFinal.innerHTML = 'Você perdeu o jogo... :(';
+        modalBox.style = 'display: flex;';
+    }
+    if(pc.life == 0){
+        msgFinal.innerHTML = 'Você ganhou! :)';
+        modalBox.style = 'display: flex;';
+    }
+}
+
+function isWinnerRodada(user,pc){
+    if(rodadaNum == 0){
+        if(user.life == pc.life){
+            msgFinal.innerHTML = 'Empatou!';
+            modalBox.style = 'display: flex;';
+        }
+        if(user.life > pc.life){
+            msgFinal.innerHTML = 'Você ganhou! :)';
+            modalBox.style = 'display: flex;';
+        } else {
+            msgFinal.innerHTML = 'Você perdeu o jogo... :(';
+            modalBox.style = 'display: flex;';
+        }
     }
 }
