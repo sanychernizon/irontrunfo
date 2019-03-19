@@ -31,7 +31,7 @@ var cards = [
     css: 48,
     special: 'Harley Comet',
     specialPwr: 15,
-    description: 'A cada 4 aulas Clé ganha 15 pontos de cada skill.',
+    description: 'Clé veio a aula! Aumentando 15 pontos de cada skill.',
     activator: ['Paul','Romulo','Fred']
 },
 {
@@ -53,7 +53,7 @@ var cards = [
     css: 86,
     special: 'Bilete da Verdade',
     specialPwr: 5,
-    description: 'Após corrigir os erros de seu oponente, Coe aumenta 5 pontos de cada skill do oponente',
+    description: 'Após corrigir os erros de seu oponente, Coe aumenta 5 pontos de cada skill do seu oponente!',
     activator: ['Fred','Manu','Sany']
 },
 {
@@ -75,7 +75,7 @@ var cards = [
     css: 68,
     special: 'Fatality',
     specialPwr: 5,
-    description: 'Aumenta 5 pontos de cada skill.',
+    description: 'Lucas aumenta 5 pontos de cada skill.',
     activator: ['Sany','Wilkor','Gabriel']
 },
 {
@@ -86,7 +86,7 @@ var cards = [
     css: 45,
     special: 'Pay the boleto',
     specialPwr: 5,
-    description: 'Retira 5 pontos de cada skill do oponente',
+    description: 'PAGUE O BOLETO! Manu retira 5 pontos de cada skill do oponente.',
     activator: ['Clé','Wilkor','Gabriel']
 },
 {
@@ -108,7 +108,7 @@ var cards = [
     css: 59,
     special: 'Heads Up',
     specialPwr: 10,
-    description: 'Aumenta 10 pontos de cada skill.',
+    description: 'Pedro aumenta 10 pontos de cada skill.',
     activator: ['Clé','Professor Coe','Wilkor']
 },
 {
@@ -130,7 +130,7 @@ var cards = [
     css: 85,
     special: 'Wilkor Mode',
     specialPwr: 10,
-    description: 'Wilkor ganha 10 pontos em cada skill',
+    description: 'WILKOR MODE!!! Wilkor ganha 10 pontos em cada skill',
     activator: ['Kerlyn','Gui','Romulo']
 },
 {

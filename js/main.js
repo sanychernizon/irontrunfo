@@ -32,10 +32,6 @@ btnSortear.addEventListener('click', function () {
         pc.card = randomCard();
         revealUserCard();
         esconder.style = 'display: flex;';
-
-        console.log(user.card.image)
-        console.log(pc.card.image)
-
         clickFlagS = true;
     }
 });
@@ -86,4 +82,10 @@ btnRestart.addEventListener('click', function(){
 
 btnOk.addEventListener('click', function () {
     modalSpecialBox.style = 'display: none;';
+    pcBarJs.style.width = pc.card.js + '%';
+    pcBarHtml.style.width = pc.card.html + '%';
+    pcBarCss.style.width = pc.card.css + '%';
+    userBarJs.style.width = user.card.js + '%';
+    userBarHtml.style.width = user.card.html + '%';
+    userBarCss.style.width = user.card.css + '%';
 });
