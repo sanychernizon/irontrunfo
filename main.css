@@ -7,42 +7,41 @@ body, html {
 .container {
     height: 100%;
     width: 100%;
-    background-color: #eeeeee;
+    background-image: url(img/background-dark.jpg);
     display: flex;
 }
 
 .box-pc {
     height: 100%;
     width: 40%;
-    background-color: aqua;
     display: inline-block;
 }
 
 .box-user {
     height: 100%;
     width: 40%;
-    background-color: rosybrown;
     display: inline-block;
 }
 
 .box-side {
     height: 100%;
     width: 20%;
-    background-color: lightgreen;
     display: inline-block;
 }
 
 .box-vida {
     width: 100%;
     height: 10%;
-    background-color: rgb(221, 90, 90);
+    background-color: rgb(0, 0, 0,.5);
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box-card {
     width: 100%;
     height: 90%;
-    background-color: beige;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,7 +71,8 @@ body, html {
 
 .box-vida h3 {
     display: inline-block;
-    padding: 0px 10px
+    padding: 0px 10px;
+    color: white;
 }
 
 .card {
@@ -80,12 +80,26 @@ body, html {
     height: 90%;
     background: linear-gradient(135deg, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 38%, rgba(44,44,44,1) 46%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
     border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .back-img img {
+    height: 50%;
+}
+
+.back-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;;
 }
 
 .esconder {
-    background: #eeeeee;
+    background: #000000;
     border-radius: 20px;
-    border: 2px solid gray;
+    border: 2px solid black;
     width: 100%;
     height: 100%;
     display: none;
@@ -101,9 +115,9 @@ body, html {
     top: 1200px;
     width: 70%;
     height: 90%;
-    background: white;
+    background: black;
     border-radius: 20px;
-    border: 2px solid gray;
+    border: 2px solid black;
     display: flex;
     flex-wrap: wrap;
     transition: .8s ease-out;
@@ -209,12 +223,15 @@ body, html {
     height: 30%;
     width: 60%;
     border-radius: 0 0 0 20px;
+    background-image: url(img/fire.png);
+    background-position: center;
     display: flex;
     flex-direction: column;
 }
 
 .special-title {
     height: 35%;
+    color: white;
 }
 
 .special-title h3 {
@@ -230,9 +247,12 @@ body, html {
 }
 
 .special-description {
-    height: 65%;
+    height: auto;
+    margin: 5px;
     padding: 8px;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
 }
 
 .card-activator {
@@ -305,6 +325,34 @@ body, html {
     font-weight: bold;
     font-size: 1.5em;
     z-index: 999;
+}
+
+.modal-home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    z-index: 999;
+}
+
+.msg-home {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.input-name {
+    width: 300px;
+    height: 50px;
+    margin: 20px;
 }
 
 .btn-jogar-novamente {

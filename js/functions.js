@@ -11,6 +11,13 @@ function randomCard() {
     return cardSelected;
 }
 
+function lifeHeart(life, box) {
+    box.innerHTML = '';
+    for (i=0; i < life; i++) {
+        box.innerHTML += '<img src="img/heart.png">'
+    }
+}
+
 function revealUserCard() {
     userCardImg.innerHTML = user.card.image;
     userCardName.innerHTML = user.card.name;
@@ -104,14 +111,14 @@ function gameJs(user, pc) {
     if (user.card.js > pc.card.js) {
         pc.life--
         setTimeout(function () {
-            lifePc.innerHTML = pc.life;
+            lifeHeart(pc.life, lifePc);
             consoleMsg.innerHTML = 'VENCEU a partida!';
         }, 1000);
     }
     if (user.card.js < pc.card.js) {
         user.life--
         setTimeout(function () {
-            lifeUser.innerHTML = user.life;
+            lifeHeart(user.life,lifeUser);
             consoleMsg.innerHTML = 'PERDEU a partida... :(';
         }, 1000);
     }
@@ -130,14 +137,14 @@ function gameHtml(user, pc) {
     if (user.card.html > pc.card.html) {
         pc.life--
         setTimeout(function () {
-            lifePc.innerHTML = pc.life;
+            lifeHeart(pc.life, lifePc);
             consoleMsg.innerHTML = 'VENCEU a partida!';
         }, 1000);
     }
     if (user.card.html < pc.card.html) {
         user.life--
         setTimeout(function () {
-            lifeUser.innerHTML = user.life;
+            lifeHeart(user.life,lifeUser);
             consoleMsg.innerHTML = 'PERDEU a partida... :(';
         }, 1000);
     }
@@ -156,14 +163,14 @@ function gameCss(user, pc) {
     if (user.card.css > pc.card.css) {
         pc.life--
         setTimeout(function () {
-            lifePc.innerHTML = pc.life;
+            lifeHeart(pc.life, lifePc);
             consoleMsg.innerHTML = 'VENCEU a partida!';
         }, 1000);
     }
     if (user.card.css < pc.card.css) {
         user.life--
         setTimeout(function () {
-            lifeUser.innerHTML = user.life;
+            lifeHeart(user.life,lifeUser);
             consoleMsg.innerHTML = 'PERDEU a partida... :(';
         }, 1000);
     }

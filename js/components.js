@@ -24,6 +24,10 @@ var btnRestart = document.querySelector('#restart-game');
 var modalSpecialBox = document.querySelector('.modal-special');
 var msgSpecial = document.querySelector('.msg-special');
 var btnOk = document.querySelector('.btn-ok');
+var btnJogar = document.querySelector('#jogar');
+var modalHome = document.querySelector('.modal-home');
+var inputName = document.querySelector('.input-name');
+var backImg = document.querySelector('.back-img');
 
 //PC CARD
 
@@ -46,3 +50,5 @@ var userCssLevel = document.querySelector('#user-css-level');
 var userSpecial = document.querySelector('#user-special');
 var userSpecialDescription = document.querySelector('#user-special-description');
 var userActivator = document.querySelector('#user-activator');
+
+var nameBox = document.querySelector('#player-name');

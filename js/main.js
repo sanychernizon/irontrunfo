@@ -1,24 +1,16 @@
-// Qual o nome do jogador?
-
-// var playerName = prompt('Qual seu nome?')
-
-// if (playerName != null) {
-//     document.getElementById("player-name").innerHTML = playerName;
-// }
-
-
 // Entrar no jogo
+var nomePlayer = ''
 
-
-// btnStart.addEventListener('click', function () {
-//     homeBox.style = 'display: none;';
-//     containerBox.style = 'display: flex;';
-// })
+btnJogar.addEventListener('click', function () {
+    modalHome.style = 'display: none;';
+    nomePlayer = inputName.value;
+    nameBox.innerHTML = nomePlayer;
+});
 
 // Vida dos players
 
-lifeUser.innerHTML = user.life;
-lifePc.innerHTML = pc.life;
+lifeHeart(user.life, lifeUser);
+lifeHeart(pc.life, lifePc);
 
 //Sortear e mostrar card
 
@@ -32,6 +24,7 @@ btnSortear.addEventListener('click', function () {
         pc.card = randomCard();
         revealUserCard();
         esconder.style = 'display: flex;';
+        backImg.style = 'display: none;';
         clickFlagS = true;
     }
 });
@@ -72,7 +65,7 @@ btnPartida.addEventListener('click', function(){
     zerarEstilos();
     rodadaNum--
     rodada.innerHTML = 'Rodada: ' + rodadaNum;
-    
+    backImg.style = 'display: flex;';
     isWinnerRodada(user,pc);
 })
 
